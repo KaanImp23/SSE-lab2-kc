@@ -1,58 +1,15 @@
 <html>
-<head>
-
-	<style>
-		body {
-			font-family: cursive;
-			margin: 0;
-			padding: 0;
-			text-align: center;
-		}
-
-		h1{
-			color: blue;
-			font-size: 200%;
-		}
-		h2{
-			color: green;
-			font-size: 190%;
-		}
-
-		p{
-			color: red;
-			font-size: 180%;
-		}
-		label{
-			font-size: 20px;
-		}
-		input{
-			margin: 10px;
-			width: 96%;
-			padding: 12px;
-			box-sizing: border-box;
-		}
-	</style>
-</head>
-<body>
-	<h1>
-		Welcome to my Prototype Web Application
-	</h1>
-	<h2>
-		Please Enter the Following Information	
-	</h2>
-	<p>
-		The details entered will be displayed on the next page with a bigger font and in your favourite colour!!
-	</p>
-
-</body>
-<form action="/submit" method="post">
-<label for="namefield">Enter Name:</label>
-<input type="text" id="namefield" name="name" size=10><br><br> 
-<label for="agefield">Enter Age:</label>
-<input type="number" id="agefield" name="age" size=10><br><br>
-<label for="colourfield">Enter your favourite colour:</label>
-<input type="text" id="colourfield" name="colour" size=5><br><br>
-<input type="submit" value="Submit">
-</form>
-
+	<head>
+	</head>
+	<body>
+		<h1>Hello World :)</h1>
+		<p>This is my new test.</p>
+		<form action="/submit" method="post">
+			<label for="namefield">Name:</label>
+			<input type="text" id="namefield" name="name">
+			<label for="agefield">Age:</label>
+			<input type="number" id="agefield" name="age">
+			<input type="submit" value="Submit">
+		</form>
+	</body>
 </html>
