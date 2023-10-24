@@ -24,6 +24,7 @@ def process_query(query):
     else:
         return "Unknown"
 
+
 @app.route('/query', methods=['GET'])
 def query_route():
     q_parameter = request.args.get('q')
