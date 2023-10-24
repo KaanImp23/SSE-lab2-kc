@@ -23,3 +23,8 @@ def process_query(query):
         return "Dinosaurs ruled the Earth 200 million years ago"
     else:
         return "Unknown"
+
+@app.route('/query', methods=['GET'])
+def query_route():
+    q_parameter = request.args.get('q')
+    process_query(q_parameter)
