@@ -13,6 +13,6 @@ def test_does_not_know_about_asteroids():
 
 def test_request():
     response = requests.get(
-            "https://api.github.com/users/input_git_username/repos"
+            "https://sse-lab2-kc.vercel.app/"
             )
     assert response.status_code == 200
