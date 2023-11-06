@@ -14,11 +14,11 @@ def submit():
     input_age = request.form.get("age")
     input_fav_colour = request.form.get("colour")
     input_git_username = request.form.get("username")
-    response = requests.get(“https://api.github.com/users/input_git_username/repos”)
+    response = requests.get("https://api.github.com/users/input_git_username/repos")
     if response.status_code == 200:
         repos = response.json() 
         for repo in repos:
-            print(repo[“full_name”])
+            print(repo["full_name"])
     return render_template(
             "hello.html", name=input_name,
             age=input_age, colour=input_fav_colour,
