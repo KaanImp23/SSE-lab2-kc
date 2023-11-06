@@ -15,7 +15,8 @@ def submit():
     input_git_username = request.form.get("username")
     return render_template(
             "hello.html", name=input_name,
-            age=input_age, colour=input_fav_colour
+            age=input_age, colour=input_fav_colour,
+            username=input_git_username
             )
 
 
