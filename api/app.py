@@ -15,14 +15,15 @@ def submit():
     input_fav_colour = request.form.get("colour")
     input_git_username = request.form.get("username")
     response = requests.get(
-            "https://api.github.com/users/input_git_username/repos"
+            "https://api.github.com/users/" + input_git_username + "/repos"
             )
     if response.status_code == 200:
         repos = response.json()
+        repo_list = []
         for repo in repos:
-            print(repo["full_name"])
+            repo_list.append(repo["full_name"])
     return render_template(
             "hello.html", name=input_name,
             age=input_age, colour=input_fav_colour,
-            username=input_git_username
+            username=input_git_username,repo=repo_list
             )
