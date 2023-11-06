@@ -12,6 +12,4 @@ def test_does_not_know_about_asteroids():
 
 
 def test_request():
-    assert response == \
-            "https://api.github.com/users/input_git_username/repos"
-            
+    assert response.status_code == 200
