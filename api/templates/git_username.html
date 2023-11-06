@@ -1,0 +1,53 @@
+<html>
+<head>
+
+        <style>
+                body {
+                        font-family: cursive;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                }
+
+                h1{
+                        color: blue;
+                        font-size: 200%;
+                }
+                h2{
+                        color: green;
+                        font-size: 190%;
+                }
+
+                p{
+                        color: red;
+                        font-size: 180%;
+                }
+                label{
+                        font-size: 20px;
+                }
+                input{
+                        margin: 10px;
+                        width: 96%;
+                        padding: 12px;
+                        box-sizing: border-box;
+                }
+        </style>
+</head>
+<body>
+        <h1>
+                Please Enter the Following Information  
+        </h1>
+</body>
+<form action="/submit" method="post">
+<label for="namefield">Enter Name:</label>
+<input type="text" id="namefield" name="name" size=10><br><br>
+<label for="agefield">Enter Age:</label>
+<input type="number" id="agefield" name="age" size=10><br><br>
+<label for="colourfield">Enter your favourite colour:</label>
+<input type="text" id="colourfield" name="colour" size=5><br><br>
+<label for="usernameGitfield">Enter your GitHub username:</label>
+<input type="text" id="usernameGitfield" name="username" size=10><br><br>
+<input type="submit" value="Submit">
+</form>
+<html>
+
