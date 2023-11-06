@@ -27,6 +27,7 @@ jobs:
           python-version: 3.9     
       - name: Install pytest
         run: 
+          pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run Pytest
         run: pytest api/*.py
