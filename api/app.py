@@ -26,16 +26,3 @@ def submit():
             age=input_age, colour=input_fav_colour,
             username=input_git_username
             )
-
-
-@app.route('/query')
-def query():
-    query_parameter = request.args.get('q')
-    return process_query(query_parameter)
-
-
-def process_query(query):
-    if query == "dinosaurs":
-        return "Dinosaurs ruled the Earth 200 million years ago"
-    else:
-        return "Unknown"
