@@ -29,9 +29,9 @@ def submit():
         dict_repo = {}
         for i in range(0, len(repo_list), 2):
             dict_repo[repo_list[i]] = repo_list[i + 1]
-        for k,v in dict_repo.items():
+        for k, v in dict_repo.items():
             sentence = "Repository: " + str(k) + \
-            " was last updated at " + v
+                " was last updated at " + v
             sentence_list.append(sentence)
     return render_template(
             "hello.html", name=input_name,
@@ -40,11 +40,12 @@ def submit():
             sentence=sentence_list
             )
 
+
 @app.route('/submit/detail', methods=["POST"])
 def details():
     repo_name = request.form.get("reponame")
     commit_response = requests.get(
-            "https://api.github.com/repos/" + repo_name + 
+            "https://api.github.com/repos/" + repo_name +
             "/commits?per_page=5"
             )
     if commit_response.status == 200:
