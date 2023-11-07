@@ -25,7 +25,7 @@ def submit():
             repo_list.append(repo["full_name"])
             repo_list.append(repo["updated_at"])
             commits = requests.get(
-                "https://api.github.com/repos/" + repo["full_name"] + 
+                "https://api.github.com/repos/" + repo["full_name"] +
                 "/commits?per_page=5"
             )
             if commits.status_code == 200:
