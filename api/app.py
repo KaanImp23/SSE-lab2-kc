@@ -33,11 +33,18 @@ def submit():
             sentence = "Repository: " + str(k) + \
                 " was last updated at " + v
             sentence_list.append(sentence)
+            sentence1 = sentence_list[0]
+            sentence2 = sentence_list[1]
+            sentence3 = sentence_list[2]
+            sentence4 = sentence_list[3]
+            sentence5 = sentence_list[4]
     return render_template(
             "hello.html", name=input_name,
             age=input_age, colour=input_fav_colour,
             username=input_git_username, dictrepo=dict_repo,
-            sentence=sentence_list
+            sentence1=sentence1, sentence2=sentence2,
+            sentence3=sentence3, sentence4=sentence4,
+            sentence5=sentence5
             )
 
 
