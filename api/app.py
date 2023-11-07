@@ -31,13 +31,14 @@ def submit():
             dict_repo[repo_list[i]] = repo_list[i + 1]
         for k, v in dict_repo.items():
             sentence = "Repository: " + str(k) + \
-                " was last updated at " + v + "                     "
+                " was last updated at " + v
             sentence_list.append(sentence)
+            combined_sentence = "\n".join(sentence_list)
     return render_template(
             "hello.html", name=input_name,
             age=input_age, colour=input_fav_colour,
             username=input_git_username, dictrepo=dict_repo,
-            sentence=sentence_list
+            sentence=combined_sentence
             )
 
 
