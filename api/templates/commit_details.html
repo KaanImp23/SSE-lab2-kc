@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+        body{
+                font-family: cursive;
+                text-align: center;
+        }      
+        h1{
+                font-size: 300%;
+        }
+        p{
+                font-size: 250%;
+        }
+        table, td, th {
+                border: 1px solid black;
+        }
+        table {
+                border-collapse: collaspe;
+                width: 100%;
+        }
+        td { text-align:center;
+        }
+</style>
+</head>
+<body>
+<h1>You are inside the repository name: {{ reponame }}</h1>
+<p>This table includes the 5 latest commitments of this repository.</p>
+<table class="center">
+  <tr>
+    <th></th>
+    <th>Committed sha</th>
+    <th>Author Committed</th>
+    <th>Date and Time Committed</th>
+    <th>Committed Message</th>
+
+   </tr>
+   <tr>
+    <th>Commit Details 1: </th>
+    <td>{{ sha1 }}</td>
+    <td>{{ author1 }}</td>
+    <td>{{ date1 }}</td>
+    <td>{{ message1 }}</td>
+   </tr>
+    <tr>
+    <th>Commit Details 2: </th>
+    <td>{{ sha2 }}</td>
+    <td>{{ author2 }}</td>
+    <td>{{ date2 }}</td>
+    <td>{{ message2 }}</td>
+   </tr>
+   <tr>
+    <th>Commit Details 3: </th>
+    <td>{{ sha3 }}</td>
+    <td>{{ author3 }}</td>
+    <td>{{ date3 }}</td>
+    <td>{{ message3 }}</td>
+   </tr>
+   <tr>
+    <th>Commit Details 4: </th>
+    <td>{{ sha4 }}</td>
+    <td>{{ author4 }}</td>
+    <td>{{ date4 }}</td>
+    <td>{{ message4 }}</td>
+   </tr>
+   <tr>
+    <th>Commit Details 5: </th>
+    <td>{{ sha5 }}</td>
+    <td>{{ author5 }}</td>
+    <td>{{ date5 }}</td>
+    <td>{{ message5 }}</td>
+   </tr>
+ </tr>
+</table>
+</body>
+</html>
+

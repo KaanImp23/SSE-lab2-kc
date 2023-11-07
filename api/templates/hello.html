@@ -10,7 +10,7 @@
 			font-size: 200%;
 		}
 		p{
-			font-size: 200%;
+			font-size: 250%;
 		}
 	</style>
 </head>
@@ -19,32 +19,12 @@
 <p>Name: {{ name }}</p>
 <p>Age: {{ age }}</p>
 <p>Colour: {{ colour }}</p>
-
-<table border="1">
- <tr> 
-    <th></th>
-    <th>{{ name1 }}</th>
-    <th>{{ name2 }}</th>
-  </tr>
-  <tr>
-    <th>Row Header 1</th>
-    <td>Data</td>
-    <td>Data</td>
-    <td>Data</td>
-  </tr>
-  <tr> 
-    <th>Row Header 2</th>
-    <td>Data</td>
-    <td>Data</td>
-    <td>Data</td>
- </tr>
- <tr> 
-    <th>Row Header 3</th>
-    <td>Data</td>
-    <td>Data</td>
-    <td>Data</td>
- </tr>
-</table>
-<p>Com: {{ com }}</p>
+<p> This is the list of repositories you have </p>
+<p>{{ sentence }}</p>
 </body>
+<form action="/submit/details" method="post">
+<label for="repofield">Enter Repository name you want to see the details:</label>
+<input type="text" id="repofield" name="reponame" size=10><br><br>
+<input type="submit" value="Submit">
+</form>
 </html>
