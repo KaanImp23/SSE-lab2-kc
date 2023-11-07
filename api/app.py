@@ -46,7 +46,7 @@ def details():
     repo_name = request.form.get("reponame")
     commit_response = requests.get(
             "https://api.github.com/repos/" + repo_name +
-            "/commits?per_page=5"
+            "/commits"
             )
     if commit_response.status == 200:
         com_sha = []
@@ -90,9 +90,7 @@ def details():
             sha4=com_sha4, author4=com_author4,
             date4=com_date4, message4=com_message4,
             sha5=com_sha5, author5=com_author5,
-            date5=com_date5, message5=com_message5
-
-            )
+            date5=com_date5, message5=com_message5)
 
 
 @app.route('/query')
