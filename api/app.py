@@ -41,7 +41,7 @@ def submit():
             )
 
 
-@app.route('/submit/detail', methods=["POST"])
+@app.route('/submit/details', methods=["POST"])
 def details():
     repo_name = request.form.get("reponame")
     commit_response = requests.get(
