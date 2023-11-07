@@ -19,11 +19,12 @@ def submit():
             )
     if response.status_code == 200:
         repos = response.json()
-        repo_list = []
+        repo_name = []
+        repo_update = []
         com_list = []
         for repo in repos:
-            repo_list.append(repo["full_name"])
-            repo_list.append(repo["updated_at"])
+            repo_name.append(repo["full_name"])
+            repo_update.append(repo["updated_at"])
             commits = requests.get(
                 "https://api.github.com/repos/" + repo["full_name"] +
                 "/commits?per_page=5"
@@ -35,11 +36,13 @@ def submit():
                     com_list.append(com["commit"]["author"]["name"])
                     com_list.append(com["commit"]["committer"]["date"])
                     com_list.append(com["commit"]["message"])
+        repo_name1 = repo_name[0]
+        repo_name2 = repo_name[1]
     return render_template(
             "hello.html", name=input_name,
             age=input_age, colour=input_fav_colour,
-            username=input_git_username, repo=repo_list,
-            com=com_list
+            username=input_git_username, name1=repo_name1,
+            name2=repo_name2,com=com_list
             )
 
 
