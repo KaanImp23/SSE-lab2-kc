@@ -48,7 +48,7 @@ def details():
             "https://api.github.com/repos/" + repo_name +
             "/commits"
             )
-    if commit_response.status == 200:
+    if commit_response.status_code == 200:
         com_sha = []
         com_author = []
         com_date = []
