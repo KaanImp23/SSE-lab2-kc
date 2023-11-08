@@ -61,11 +61,11 @@ def chooserepo():
             globals()[f"repoupdate{j}"] = repo_update[j]
     return render_template(
             "hello_git_user.html", name=input_name,
-            colour=input_fav_colour,username=input_git_username,
-            reponame0=reponame0,reponame1=reponame1,reponame1=reponame1,
-            reponame1=reponame1,reponame1=reponame1,repoupdate0=repoupdate0,
-            repoupdate1=repoupdate1,repoupdate2=repoupdate2,
-            repoupdate3=repoupdate3,repoupdate4=repoupdate4
+            colour=input_fav_colour, username=input_git_username,
+            reponame0=reponame0, reponame1=reponame1, reponame2=reponame2,
+            reponame3=reponame3, reponame4=reponame4, repoupdate0=repoupdate0,
+            repoupdate1=repoupdate1, repoupdate2=repoupdate2,
+            repoupdate3=repoupdate3, repoupdate4=repoupdate4
             )
 
 
