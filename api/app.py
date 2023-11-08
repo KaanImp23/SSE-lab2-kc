@@ -32,7 +32,8 @@ def submit():
             sentence = "Repository: " + str(k) + \
                 " was last updated at " + v
             sentence_list.append(sentence)
-            combined_sentence = "\n".join(sentence_list)
+            separator = "           "
+            combined_sentence = separator.join(sentence_list)
     return render_template(
             "hello.html", name=input_name,
             colour=input_fav_colour,
