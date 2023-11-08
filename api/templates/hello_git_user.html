@@ -9,33 +9,67 @@
 		h1{
                 font-size: 200%;
         	}
-		h1{
-		font-size: 180%;
-		}
+	
         	p{
-                font-size: 150%;
+                font-size: 100%;
         	}
 		label{
-                        font-size: 20px;
+                        font-size: 15px;
                 }
                 input{
                         margin: 10px;
                         width: 96%;
-                        padding: 12px;
+                        padding: 5px;
                         box-sizing: border-box;
                 }
+                table, td, th {
+                border: 1px solid black;
+        }
+        table {
+                border-collapse: collaspe;
+                width: 100%;
+        }
+        td { text-align:center;
+        }
 	</style>
 </head>
 <body>
 <h1>Hello {{ name }}!</h1>
-<h2>Your are inside the following GitHub Account: {{ username }}</h2>
+<p>Your are inside the following GitHub Account: {{ username }}</p>
 <p>This page is shown in your favourite colour: {{ colour }}!<p>
-<p> This is the list of repositories you have</p>
-<p>{{ sentence }}</p>
+<p> This is the list of repositories you have (up to 5 repositories)</p>
+<table class="center">
+  <tr>
+    <th>Repository Name</th>
+    <th>Last Updated At</th>
+   </tr>
+   <tr>
+    <td>{{ reponame0 }}</td>
+    <td>{{ repoupdate0 }}</td>
+   </tr>
+    <tr>
+	<td>{{ reponame1 }}</td>
+    <td>{{ repoupdate1 }}</td>
+   </tr>
+   <tr>
+	<td>{{ reponame2 }}</td>
+    <td>{{ repoupdate2 }}</td>
+   </tr>
+   <tr>
+	<td>{{ reponame3 }}</td>
+    <td>{{ repoupdate3 }}</td>
+   </tr>
+   <tr>
+	<td>{{ reponame4 }}</td>
+    <td>{{ repoupdate4 }}</td>
+   </tr>
+ </tr>
+</table>
+<br>
 </body>
 <form action="/askuser/chooserepo/details" method="post">
 <label for="repofield">Enter Repository name you want to see the details:<br>(You can copy the name from the list above)</label>
-<input type="text" id="repofield" name="reponame" size=10><br><br>
+<input type="text" id="repofield" name="reponame" size=10>
 <input type="submit" value="Submit">
 </form>
 </html>
