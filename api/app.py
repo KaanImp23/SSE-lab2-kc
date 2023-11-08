@@ -18,6 +18,7 @@ def submit():
             age=input_age, colour=input_fav_colour
             )
 
+
 @app.rpute("/askuser")
 def askuser():
     return render_template("git_username.html")
