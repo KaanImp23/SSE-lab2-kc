@@ -51,7 +51,7 @@ def chooserepo():
             separator = "           "
             combined_sentence = separator.join(sentence_list)
     return render_template(
-            "hello.html", name=input_name,
+            "hello_git_user.html", name=input_name,
             colour=input_fav_colour,
             username=input_git_username, dictrepo=dict_repo,
             sentence=combined_sentence
