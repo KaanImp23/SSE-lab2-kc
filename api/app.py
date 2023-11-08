@@ -53,12 +53,28 @@ def chooserepo():
         update_length = len(repo_update)
         if name_length > 5:
             name_length = 5
-        for i in range(name_length):
-            globals()[f"reponame{i}"] = repo_name[i]
+        if name_length > 0:
+            reponame0 = repo_name[0]
+            if name_length - 1 > 0:
+                reponame1 = repo_name[1]
+                if name_length - 2 > 0:
+                    reponame2 = repo_name[2]
+                    if name_length - 3 > 0:
+                        reponame3 = repo_name[3]
+                        if name_length - 4 > 0:
+                            reponame4 = repo_name[4]
         if update_length > 5:
             update_length = 5
-        for j in range(update_length):
-            globals()[f"repoupdate{j}"] = repo_update[j]
+         if update_length > 0:
+            repoupdate0 = repo_update[0]
+            if update_length - 1 > 0:
+                repoupdate1 = repo_update[1]
+                if update_length - 2 > 0:
+                    repoupdate2 = repo_update[2]
+                    if update_length - 3 > 0:
+                        repoupdate3 = repo_update[3]
+                        if update_length - 4 > 0:
+                            repoupdate4 = repo_update[4]
     return render_template(
             "hello_git_user.html", name=input_name,
             colour=input_fav_colour, username=input_git_username,
@@ -119,14 +135,46 @@ def details():
             date_length = 5
         if message_length > 5:
             message_length = 5
-        for i in range(sha_length):
-            globals()[f"com_sha{i}"] = com_sha[i]
-        for i in range(author_length):
-            globals()[f"com_author{i}"] = com_author[i]
-        for i in range(date_length):
-            globals()[f"com_date{i}"] = com_date[i]
-        for i in range(message_length):
-            globals()[f"com_message{i}"] = com_message[i]
+        if sha_length > 0:
+            com_sha0 = com_sha[0]
+            if sha_length - 1 > 0:
+                com_sha1 = com_sha[1]
+                if sha_length - 2 > 0:
+                    com_sha2 = com_sha[2]
+                    if sha_length - 3 > 0:
+                        com_sha3 = com_sha[3]
+                        if sha_length - 4 > 0:
+                            com_sha4 = com_sha[4]
+        if author_length > 0:
+            com_author0 = com_author[0]
+            if author_length - 1 > 0:
+                com_author1 = com_author[1]
+                if author_length - 2 > 0:
+                    com_author2 = com_author[2]
+                    if author_length - 3 > 0:
+                        com_author3 = com_author[3]
+                        if author_length - 4 > 0:
+                            com_author4 = com_author[4]
+        if date_length > 0:
+            com_date0 = com_date[0]
+            if date_length - 1 > 0:
+                com_date1 = com_date[1]
+                if date_length - 2 > 0:
+                    com_date2 = com_date[2]
+                    if date_length - 3 > 0:
+                        com_date3 = com_date[3]
+                        if date_length - 4 > 0:
+                            com_date4 = com_date[4]
+        if message_length > 0:
+            com_message0 = com_message[0]
+            if message_length - 1 > 0:
+                com_message1 = com_message[1]
+                if message_length - 2 > 0:
+                    com_message2 = com_message[2]
+                    if message_length - 3 > 0:
+                        com_message3 = com_message[3]
+                        if message_length - 4 > 0:
+                            com_message4 = com_message[4]
         return render_template(
             "commit_details.html", reponame=repo_name,
             sha1=com_sha0, author1=com_author0,
