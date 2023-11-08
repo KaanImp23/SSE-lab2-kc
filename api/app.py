@@ -36,6 +36,16 @@ def chooserepo():
         repos = response.json()
         repo_name = []
         repo_update = []
+        reponame0 = None
+        reponame1 = None
+        reponame2 = None
+        reponame3 = None
+        reponame4 = None
+        repoupdate0 = None
+        repoupdate1 = None
+        repoupdate2 = None
+        repoupdate3 = None
+        repoupdate4 = None
         for repo in repos:
             repo_name.append(repo["full_name"])
             repo_update.append(repo["updated_at"])
@@ -77,6 +87,26 @@ def details():
             com_author.append(commit["commit"]["author"]["name"])
             com_date.append(commit["commit"]["committer"]["date"])
             com_message.append(commit["commit"]["message"])
+        com_sha0 = None
+        com_sha1 = None
+        com_sha2 = None
+        com_sha3 = None
+        com_sha4 = None
+        com_author0 = None
+        com_author1 = None
+        com_author2 = None
+        com_author3 = None
+        com_author4 = None
+        com_date0 = None
+        com_date1 = None
+        com_date2 = None
+        com_date3 = None
+        com_date4 = None
+        com_message0 = None
+        com_message1 = None
+        com_message2 = None
+        com_message3 = None
+        com_message4 = None
         sha_length = len(com_sha)
         author_length = len(com_author)
         date_length = len(com_date)
