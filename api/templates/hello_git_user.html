@@ -1,0 +1,41 @@
+<html>
+<head>
+	<style>
+		body{
+			font-family: cursive;
+			text-align: center;
+			color: {{ colour }};
+		}
+		h1{
+                font-size: 200%;
+        	}
+		h1{
+		font-size: 180%;
+		}
+        	p{
+                font-size: 150%;
+        	}
+		label{
+                        font-size: 20px;
+                }
+                input{
+                        margin: 10px;
+                        width: 96%;
+                        padding: 12px;
+                        box-sizing: border-box;
+                }
+	</style>
+</head>
+<body>
+<h1>Hello {{ name }}!</h1>
+<h2>Your are inside the following GitHub Account: {{ username }}</h2>
+<p>This page is shown in your favourite colour: {{ colour }}!<p>
+<p> This is the list of repositories you have</p>
+<p>{{ sentence }}</p>
+</body>
+<form action="/askuser/chooserepo/details" method="post">
+<label for="repofield">Enter Repository name you want to see the details:<br>(You can copy the name from the list above)</label>
+<input type="text" id="repofield" name="reponame" size=10><br><br>
+<input type="submit" value="Submit">
+</form>
+</html>

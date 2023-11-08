@@ -5,11 +5,26 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template("git_username.html")
+    return render_template("index.html")
 
 
 @app.route("/submit", methods=["POST"])
 def submit():
+    input_name = request.form.get("name")
+    input_age = request.form.get("age")
+    input_fav_colour = request.form.get("colour")
+    return render_template(
+            "hello.html", name=input_name,
+            age=input_age, colour=input_fav_colour
+            )
+
+@app.rpute("/askuser")
+def askuser():
+    return render_template("git_username.html")
+
+
+@app.route("/askuser/chooserepo", methods=["POST"])
+def chooserepo():
     input_name = request.form.get("name")
     input_fav_colour = request.form.get("colour")
     input_git_username = request.form.get("username")
@@ -42,7 +57,7 @@ def submit():
             )
 
 
-@app.route('/submit/details', methods=["POST"])
+@app.route('/askuser/chooserepo/details', methods=["POST"])
 def details():
     repo_name = request.form.get("reponame")
     commit_response = requests.get(
