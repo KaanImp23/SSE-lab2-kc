@@ -65,7 +65,7 @@ def chooserepo():
                             reponame4 = repo_name[4]
         if update_length > 5:
             update_length = 5
-         if update_length > 0:
+        if update_length > 0:
             repoupdate0 = repo_update[0]
             if update_length - 1 > 0:
                 repoupdate1 = repo_update[1]
