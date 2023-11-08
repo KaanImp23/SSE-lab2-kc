@@ -19,7 +19,7 @@ def submit():
             )
 
 
-@app.rpute("/askuser")
+@app.route("/askuser")
 def askuser():
     return render_template("git_username.html")
 
