@@ -11,7 +11,6 @@ def hello_world():
 @app.route("/submit", methods=["POST"])
 def submit():
     input_name = request.form.get("name")
-    input_age = request.form.get("age")
     input_fav_colour = request.form.get("colour")
     input_git_username = request.form.get("username")
     response = requests.get(
@@ -36,7 +35,7 @@ def submit():
             combined_sentence = "\n".join(sentence_list)
     return render_template(
             "hello.html", name=input_name,
-            age=input_age, colour=input_fav_colour,
+            colour=input_fav_colour,
             username=input_git_username, dictrepo=dict_repo,
             sentence=combined_sentence
             )
