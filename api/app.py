@@ -189,36 +189,6 @@ def details():
             date5=com_date4, message5=com_message4)
 
 
-def translate_text(text_to_translate, source_language, target_language):
-    """Translates text from source language to
-    target language using Google Translate API."""
-    translate_url = 'https://translate.googleapis.com/translate_text'
-    headers = {
-        'Authorization': 'Bearer YOUR_API_KEY'
-    }
-    data = {
-        'q': text_to_translate,
-        'target': target_language,
-        'source': source_language
-    }
-    response = requests.post(translate_url, headers=headers, data=data)
-    if response.status_code == 200:
-        response_json = response.json()
-        translated_text = response_json['data']['translations'][0]
-        ['translatedText']
-        return translated_text
-    else:
-        raise Exception(f'Failed to translate text: {response.text}')
-
-
-source_language = "en"
-target_language = "fr"
-text_to_translate = "Hello, world!"
-translated_text = translate_text(
-        text_to_translate, source_language, target_language)
-print(translated_text)
-
-
 @app.route('/query')
 def query():
     query_parameter = request.args.get('q')
