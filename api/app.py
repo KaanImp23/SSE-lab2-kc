@@ -188,8 +188,10 @@ def details():
             sha5=com_sha4, author5=com_author4,
             date5=com_date4, message5=com_message4)
 
+
 def translate_text(text_to_translate, source_language, target_language):
-    """Translates text from source language to target language using Google Translate API."""
+    """Translates text from source language to\ 
+    target language using Google Translate API."""
     translate_url = 'https://translate.googleapis.com/translate_text'
     headers = {
         'Authorization': 'Bearer YOUR_API_KEY'
@@ -202,7 +204,8 @@ def translate_text(text_to_translate, source_language, target_language):
     response = requests.post(translate_url, headers=headers, data=data)
     if response.status_code == 200:
         response_json = response.json()
-        translated_text = response_json['data']['translations'][0]['translatedText']
+        translated_text = response_json['data']['translations'][0]
+        ['translatedText']
         return translated_text
     else:
         raise Exception(f'Failed to translate text: {response.text}')
@@ -211,7 +214,8 @@ def translate_text(text_to_translate, source_language, target_language):
 source_language = "en"
 target_language = "fr"
 text_to_translate = "Hello, world!"
-translated_text = translate_text(text_to_translate, source_language, target_language)
+translated_text = translate_text(text_to_translate, 
+        source_language, target_language)
 print(translated_text)
 
 
