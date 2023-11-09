@@ -30,7 +30,7 @@ def chooserepo():
     input_fav_colour = request.form.get("colour")
     input_git_username = request.form.get("username")
     random_joke = request.get(
-            https://official-joke-api.appspot.com/random_joke
+            "https://official-joke-api.appspot.com/random_joke"
             )
     response = requests.get(
             "https://api.github.com/users/" + input_git_username + "/repos"
