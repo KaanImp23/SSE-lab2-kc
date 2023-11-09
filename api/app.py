@@ -29,9 +29,6 @@ def chooserepo():
     input_name = request.form.get("name")
     input_fav_colour = request.form.get("colour")
     input_git_username = request.form.get("username")
-    random_joke = request.get(
-            "https://official-joke-api.appspot.com/random_joke"
-            )
     response = requests.get(
             "https://api.github.com/users/" + input_git_username + "/repos"
             )
@@ -81,7 +78,6 @@ def chooserepo():
     return render_template(
             "hello_git_user.html", name=input_name,
             colour=input_fav_colour, username=input_git_username,
-            joke=random_joke,
             reponame0=reponame0, reponame1=reponame1, reponame2=reponame2,
             reponame3=reponame3, reponame4=reponame4, repoupdate0=repoupdate0,
             repoupdate1=repoupdate1, repoupdate2=repoupdate2,
