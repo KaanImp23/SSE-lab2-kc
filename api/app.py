@@ -214,8 +214,8 @@ def translate_text(text_to_translate, source_language, target_language):
 source_language = "en"
 target_language = "fr"
 text_to_translate = "Hello, world!"
-translated_text = translate_text(text_to_translate,
-source_language, target_language)
+translated_text = translate_text(
+        text_to_translate, source_language, target_language)
 print(translated_text)
 
 
